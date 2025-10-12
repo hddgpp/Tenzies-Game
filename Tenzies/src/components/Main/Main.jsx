@@ -3,7 +3,7 @@ import './Main.css'
 
 export default function Main() {
   const [nums, setNums] = React.useState(
-    Array(10).fill(1) // start all at 1
+    Array(10).fill(1)
   )
 
   function randomNum(index) {
