@@ -16,7 +16,7 @@ export default function Main() {
 
   return (
     <main>
-      <div className='number-c'>
+      <div className='num-c'>
         {nums.map((num, i) => (
           <button key={i} className='btn' onClick={() => randomNum(i)}>
             {num}

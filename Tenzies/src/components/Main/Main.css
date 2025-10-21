@@ -2,4 +2,32 @@ main {
   background-color: azure;
   height: 100%;
   border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.num-c {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;
+}
+
+.btn {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: -9px 11px 13px -9px rgba(0,0,0,0.52);
+  border-radius: 10px;
+  border-style: inset;
+  background-color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
 }
