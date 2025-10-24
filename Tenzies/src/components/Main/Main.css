@@ -31,3 +31,13 @@ main {
   background-color: #f0f0f0;
   transform: translateY(-2px);
 }
+
+.roll-btn{
+  background-color: #0095ff;
+  padding: 13px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+}
