@@ -2,17 +2,18 @@ import React from 'react'
 import './Main.css'
 
 export default function Main() {
-  const [nums, setNums] = React.useState(Array(10).fill(1))
+  const [nums, setNums] = React.useState(
+    Array(10).fill().map(() => ({ value: 1, isHeld: false }))
+  )
 
-  // this function rolls all dice at once
   function rollAll() {
-    setNums(prev => prev.map(() => Math.ceil(Math.random() * 6)))
+    setNums(prev =>
+       prev.map(() => ({ value: Math.ceil(Math.random() * 6), isHeld: false })))
   }
 
-  // each button now just shows the number, no click handler
   const diceElements = nums.map((num, i) => (
     <button key={i} className='btn'>
-      {num}
+      {num.value}
     </button>
   ))
 
