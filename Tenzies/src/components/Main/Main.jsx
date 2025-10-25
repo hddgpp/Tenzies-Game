@@ -8,14 +8,21 @@ export default function Main() {
 
   function rollAll() {
     setNums(prev =>
-       prev.map(() => ({ value: Math.ceil(Math.random() * 6), isHeld: false })))
+      prev.map(() => ({ value: Math.ceil(Math.random() * 6), isHeld: false }))
+    )
   }
 
-  const diceElements = nums.map((num, i) => (
-    <button key={i} className='btn'>
-      {num.value}
-    </button>
-  ))
+  const diceElements = nums.map((num, i) => {
+    const styles = {
+      backgroundColor: num.isHeld ? 'white' : '#59E391'
+    }
+
+    return (
+      <button key={i} className='btn' style={styles}>
+        {num.value}
+      </button>
+    )
+  })
 
   return (
     <main>
